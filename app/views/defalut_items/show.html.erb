@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Item:</b>
+  <%= @defalut_item.item_id %>
+</p>
+
+<p>
+  <b>Qty:</b>
+  <%= @defalut_item.qty %>
+</p>
+
+
+<%= link_to 'Edit', edit_defalut_item_path(@defalut_item) %> |
+<%= link_to 'Back', defalut_items_path %>

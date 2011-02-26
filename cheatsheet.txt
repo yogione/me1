@@ -1,0 +1,4 @@
+rails g scaffold Item name:string description:string
+
+rails g scaffold Store location:string zip:integer item_id:integer price:float
+

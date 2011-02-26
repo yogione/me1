@@ -1,0 +1,25 @@
+<h1>Listing defalut_items</h1>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Qty</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @defalut_items.each do |defalut_item| %>
+  <tr>
+    <td><%= defalut_item.item_id %></td>
+    <td><%= defalut_item.qty %></td>
+    <td><%= link_to 'Show', defalut_item %></td>
+    <td><%= link_to 'Edit', edit_defalut_item_path(defalut_item) %></td>
+    <td><%= link_to 'Destroy', defalut_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Defalut item', new_defalut_item_path %>

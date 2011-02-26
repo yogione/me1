@@ -1,0 +1,27 @@
+<h1>Listing user_items</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Item</th>
+    <th>Qty</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_items.each do |user_item| %>
+  <tr>
+    <td><%= user_item.user_id %></td>
+    <td><%= user_item.item_id %></td>
+    <td><%= user_item.qty %></td>
+    <td><%= link_to 'Show', user_item %></td>
+    <td><%= link_to 'Edit', edit_user_item_path(user_item) %></td>
+    <td><%= link_to 'Destroy', user_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User item', new_user_item_path %>
