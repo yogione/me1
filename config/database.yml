@@ -10,9 +10,9 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: awdb
+  database: me1
   pool: 5
-  username: awdb
+  username: me1
   password: 
   socket: /var/run/mysqld/mysqld.sock
 
