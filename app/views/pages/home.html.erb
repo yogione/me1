@@ -1,0 +1,35 @@
+<%# if signed_in? %>
+      <table class="pretty-table" summary="stories listing">
+        <% if not signed_in? %>
+        <tr><td colspan="4"> <%= link_to "Sign in", signin_path, :class => "signin_button2 round" %>  | <%= link_to "Sign up now!", signup_path, :class => "signup_button2 round" %>
+   </td></tr>
+        <%end%>
+        <tr><td class="civil_note" colspan=5>
+       suggestion: quickly scan the main story and keep the discussion here - add quality comments </td></tr>
+        <% @stories.each do |story|  %>
+              <tr class="story_tr round"><td><%if story.photo.exists? then %>
+                <%=image_tag story.photo.url(:thumb), :size => "80x80" %></td>
+            <% else %>
+              <%=image_tag("logo6.jpeg",  :size => "80x80") %></td>
+          <% end %>
+          <td class="votes_box round"><%= link_to image_tag("thumbsup.png", :size=>"20x20"), upvote_story_path(story),
+            :method => :get, :remote => true %> <br/>
+            votes&nbsp;<%=story.votes%><br/>
+            <%=link_to image_tag("thumbsdown.png", :size=>"20x20"),
+              downvote_story_path(story), :method => :get %> </td>
+            <td class="main"><a href="<%= story.url %> " class="story_url"><%= story.title %></a>
+              <br/><%= story.teaser %>
+              <br/> <font size="1">  Posted by <%= story.user.name %>&nbsp;<%= time_ago_in_words(story.created_at) %> ago.</font>
+              <br/> <%=Comment.moderated(story.id).count %>
+              <%= link_to "Comments", story_path(story)%></td>
+          </tr>
+          <% end %>
+      </table>
+      <%#*</tr>%>
+    <%#*</table>%>
+
+<%# else %>
+
+ 
+
+<%# end %>
