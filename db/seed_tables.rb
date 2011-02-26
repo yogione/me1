@@ -1,3 +1,0 @@
-SEED_TABLES = [
-  "retirees"
-]

@@ -1,6 +1,14 @@
 SampleApp::Application.routes.draw do
 
 
+  resources :user_items
+
+  resources :defalut_items
+
+  resources :stores
+
+  resources :items
+
   resources :users do
     member do
       #  get :following, :followers

@@ -10,16 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110212145338) do
+ActiveRecord::Schema.define(:version => 20110226211453) do
 
-  create_table "comments", :force => true do |t|
-    t.string   "comment_text"
-    t.integer  "story_id"
-    t.integer  "user_id"
-    t.integer  "moderated"
+  create_table "defalut_items", :force => true do |t|
+    t.integer  "item_id"
+    t.integer  "qty"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "votes"
+  end
+
+  create_table "item2s", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "microposts", :force => true do |t|
@@ -57,6 +68,15 @@ ActiveRecord::Schema.define(:version => 20110212145338) do
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+  end
+
+  create_table "stores", :force => true do |t|
+    t.string   "location"
+    t.integer  "zip"
+    t.integer  "item_id"
+    t.float    "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "stories", :force => true do |t|

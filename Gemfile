@@ -9,9 +9,11 @@ gem 'unicorn'
 gem 'capistrano'
 gem 'ruby-debug19'
 gem 'web-app-theme', '>=0.6.2'
-gem 'fancy-buttons'
+#gem 'fancy-buttons'
 gem 'capistrano-ext', :require => 'capistrano'
 gem 'formtastic'
+gem "paperclip", "~> 2.3"
+
 
 
 group :development do
