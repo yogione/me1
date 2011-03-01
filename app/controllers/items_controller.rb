@@ -40,6 +40,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.xml
   def create
+    p params
     @item = Item.new(params[:item])
 
     respond_to do |format|

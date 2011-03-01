@@ -13,7 +13,7 @@ gem 'web-app-theme', '>=0.6.2'
 gem 'capistrano-ext', :require => 'capistrano'
 gem 'formtastic'
 gem "paperclip", "~> 2.3"
-
+gem 'geo_location'
 
 
 group :development do

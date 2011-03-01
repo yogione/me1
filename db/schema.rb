@@ -10,18 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110226211453) do
+ActiveRecord::Schema.define(:version => 20110228012851) do
 
   create_table "defalut_items", :force => true do |t|
     t.integer  "item_id"
     t.integer  "qty"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "item2s", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,43 +24,10 @@ ActiveRecord::Schema.define(:version => 20110226211453) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "microposts", :force => true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
-
-  create_table "relationships", :force => true do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
-
-  create_table "retirees", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "years_worked"
-    t.string   "plant"
-    t.string   "pet_story"
-    t.string   "what_are_you_doing"
-    t.string   "photo_path1"
-    t.string   "video_path1"
-    t.string   "message_to_ceo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "stores", :force => true do |t|
@@ -77,21 +37,15 @@ ActiveRecord::Schema.define(:version => 20110226211453) do
     t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
-  create_table "stories", :force => true do |t|
-    t.string   "title"
-    t.string   "teaser"
-    t.string   "url"
+  create_table "user_items", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "votes"
-    t.string   "photo_path1"
-    t.string   "video_path1"
+    t.integer  "item_id"
+    t.integer  "qty"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
   end
 
   create_table "users", :force => true do |t|

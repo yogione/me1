@@ -2,3 +2,4 @@ rails g scaffold Item name:string description:string
 
 rails g scaffold Store location:string zip:integer item_id:integer price:float
 
+rails generate migration add_photo_to_items photo_file_name:string photo_content_type:string photo_file_size:integer photo_updated_at:datetime

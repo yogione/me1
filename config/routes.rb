@@ -15,66 +15,60 @@ SampleApp::Application.routes.draw do
     end
   end
 
-  resources :stories do
-    member do
-      get  :upvote, :downvote
-    end
-    resources :comments do
-      member do
-        get :upvote, :downvote
-      end
-    end
-  end
+#  resources :stories do
+#    member do
+#      get  :upvote, :downvote
+#    end
+#    resources :comments do
+#      member do
+#        get :upvote, :downvote
+#      end
+#    end
+#  end
 
-  resources :comments do
-    member do
-      get :approve, :reject
-    end
-    collection do
-      get :index
-    end
-  end
+#  resources :comments do
+#    member do
+#      get :approve, :reject
+#    end
+#    collection do
+#      get :index
+#    end
+#  end
   
-  resources :sessions,      :only => [:new, :create, :destroy] do
-    collection do
-      get :forgot_password, :new_password, :update_reset_password
-      post :send_reset_password, :reset_new_password
-    end
-  end
+#  resources :sessions,      :only => [:new, :create, :destroy] do
+#    collection do
+#      get :forgot_password, :new_password, :update_reset_password
+#      post :send_reset_password, :reset_new_password
+#    end
+#  end
   #  resources :microposts,    :only => [:create, :destroy]
   #resources :stories,    :only => [:create, :destroy, :show]
   resources :comments,    :only => [:create, :destroy, :new, :show]
   #  resources :relationships, :only => [:create, :destroy]
   
-  root :to => "pages#home"
+ # root :to => "pages#home"
+ root :to => "items#index"
 
   # match '/upvote', :to => 'stories#upvote'
   #match '/downvote', :to => 'stories#downvote'
-   match '/unsigned_retiree', :to => 'pages#unsigned_retiree'
+  # match '/unsigned_retiree', :to => 'pages#unsigned_retiree'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-  match '/poststory', :to => 'pages#poststory'
-  match '/postcomment', :to => 'comments#create'
+  match '/home', :to => 'pages#home'
+ # match '/postcomment', :to => 'comments#create'
   #match '/showstory', :to => 'stories#show'
-  match '/retiree', :to => 'retirees#index'
+ # match '/retiree', :to => 'retirees#index'
 
-  resources :retirees do
-    collection do
-      post :find_retiree
-    end
-  end
-  get "retiree/index"
-  get "retiree/update"
-  get "retiree/delete"
-  get "retiree/create"
-  get "comments/create"
-  get "comments/destroy"
-  get "comments/show"
-
+#  resources :retirees do
+#    collection do
+#      post :find_retiree
+#    end
+#  end
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

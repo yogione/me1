@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <% if @item.photo.exists? then %>
+<%= image_tag @item.photo.url(:thumb) %>
+  <% end %>
+</p>
 
 <p>
   <b>Name:</b>

@@ -12,3 +12,4 @@ class CreateItems < ActiveRecord::Migration
     drop_table :items
   end
 end
+
