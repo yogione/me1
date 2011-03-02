@@ -1,7 +1,8 @@
 <h1>Listing items</h1>
 
-<table class="grid">
+<table class="pretty-table">
   <tr>
+    <th>num</th>
     <th>Name</th>
     <th>Description</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @items.each do |item| %>
   <tr>
+    <td><%= item.id %></td>
     <td><%= item.name %></td>
     <td><%= item.description %></td>
     <td><%= link_to 'Show', item %></td>

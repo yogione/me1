@@ -1982,3 +1982,257 @@ Rendered layouts/_header.html.erb (65.5ms)
 Rendered layouts/_footer.html.erb (5.0ms)
 Rendered pages/home.html.erb within layouts/application (153.5ms)
 Completed 200 OK in 7443ms (Views: 170.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 21:59:14 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (72.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (182.8ms)
+Completed 200 OK in 208ms (Views: 191.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:01:27 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (132.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (187.9ms)
+Completed 200 OK in 214ms (Views: 196.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:01:28 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:02:59 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (68.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (183.6ms)
+Completed 200 OK in 210ms (Views: 191.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:03:05 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:07:43 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (75.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (127.3ms)
+Completed 200 OK in 218ms (Views: 197.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:07:49 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:08:02 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (65.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 195ms (Views: 123.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:08:02 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:08:18 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (63.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (115.1ms)
+Completed 200 OK in 141ms (Views: 123.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:08:18 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:08:42 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (67.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.1ms)
+Rendered items/index.html.erb within layouts/application (118.9ms)
+Completed 200 OK in 146ms (Views: 126.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:08:42 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:09:11 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (68.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered items/index.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 147ms (Views: 127.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:09:11 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:09:41 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (66.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.2ms)
+Rendered items/index.html.erb within layouts/application (119.2ms)
+Completed 200 OK in 147ms (Views: 128.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:09:41 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-28 22:09:53 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (66.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (4.0ms)
+Rendered items/index.html.erb within layouts/application (180.4ms)
+Completed 200 OK in 206ms (Views: 188.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-02-28 22:09:53 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-01 21:22:40 -0500
+  Processing by PagesController#home as HTML
+Completed   in 4ms
+
+SocketError (getaddrinfo: Name or service not known):
+  app/controllers/pages_controller.rb:7:in `home'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-01 21:22:44 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (53.1ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (34.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (392.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.6ms)
+Rendered items/index.html.erb within layouts/application (1037.2ms)
+Completed 200 OK in 1391ms (Views: 1138.5ms | ActiveRecord: 53.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2011-03-01 21:22:45 -0500
+  Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.3ms)[0m  SELECT `stores`.* FROM `stores`
+Rendered layouts/_stylesheets.html.erb (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (219.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered stores/index.html.erb within layouts/application (287.8ms)
+Completed 200 OK in 354ms (Views: 314.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-03-01 21:23:01 -0500
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 84ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-03-01 21:23:01 -0500
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (19.2ms)
+Completed   in 112ms
+
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x981cb7c>:0x981ba74>):
+    1: <h1>Sign in</h1>
+    2: <div class="round" style="background-color: lightgray;width:50%;padding:5%;">
+    3: <%= form_for(:session, :url => sessions_path) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.text_field :email %>
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__472877575_79746920_75981482'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.9ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.4ms)

@@ -6,6 +6,81 @@ body {
   text-align: center;
   background: url(http://eeleillib.com/images/mainBg.png) #ebebeb 0px 0px repeat-x;
 }
+/*override Blueprint css table settings  */
+table {margin-bottom:0;}
+th, td, caption {padding:0px 0px 0px 0px;}
+
+      .pretty-table
+      {
+        padding: 0;
+        margin: 0;
+        border-collapse: collapse;
+        font-size: 0.9em;
+        width: 90%;
+        horizontal-align: right;
+
+      }
+
+.pretty-table th {border-bottom: 3px solid #DCE3EB;
+    padding: 15px;
+    text-align: left; text-shadow: 1px 1px 1px #8E8E8E;}
+
+     .pretty-table td
+      {
+        border-bottom: 1px solid #DCE3EB;
+        padding: 12px;
+        text-align: left;
+        color: #7B7B79;
+		vertical-align: top;
+		border-left: 1px dotted #DCE3EB;
+    border-right: 1px dotted #DCE3EB;
+      }
+
+      .pretty-table th[scope=col]
+      {
+        color: #000;
+        background: url("../fade.jpg") repeat-y right;
+        text-transform: uppercase;
+        font-size: 1.5em;
+
+		border-bottom: 3px solid #DCE3EB;
+    padding: 15px;
+      }
+
+      .pretty-table th+th[scope=col]
+      {
+        color: #4F4F4F;
+        background: #fff;
+        border-left: 1px solid #DCE3EB;
+    border-right: 1px solid #DCE3EB; font-size:0.9em
+      }
+
+      .pretty-table th[scope=row]
+      {
+        background: url("../fade.jpg") repeat-y right;
+        border-bottom: 1px solid #DCE3EB;
+    padding: 15px;
+    vertical-align: top;width: 12%;
+      }
+
+
+      .pretty-table tr:hover td, .pretty-table th[scope=row]:hover
+      {
+        background: #F7FCFF;
+
+      }
+
+ .pretty-table td + td + td + td,  .pretty-table th[scope=col] + th[scope=col] + th[scope=col] + th[scope=col] + th[scope=col] {border-right:0}
+
+.pretty-table td a:link {
+background: url("../arrow.png") no-repeat scroll 92px center transparent;
+    border: 1px solid #E3DCDC;
+    color: #9CB8C5;
+    font-weight: bold;
+    padding: 2px 15px 2px 5px;
+    text-decoration: none;
+    vertical-align: middle;  }
+
 #header-wrap {
   /* background: #009908; */
   /* background: #009908 url('/images/forest_header.jpg') no-repeat top center; */
