@@ -10,11 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110228012851) do
+ActiveRecord::Schema.define(:version => 20110302225553) do
 
   create_table "defalut_items", :force => true do |t|
     t.integer  "item_id"
     t.integer  "qty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "home_tables", :force => true do |t|
+    t.integer  "item_id"
+    t.float    "store1_price"
+    t.float    "store2_price"
+    t.float    "store3_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

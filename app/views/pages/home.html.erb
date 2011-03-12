@@ -1,7 +1,33 @@
-    <table class="pretty-table" summary="items listing">
+    <table>
       <tr><td>Your IP address is <%= @client_ip %>   </td></tr>
-       city: <%=@city%> <br />
-       region: <%=@region%> <br />
-       country: <%=@country%> <br />
+      <tr> <td>city: <%=@city%> </td>
+        <td> region: <%=@region%> </td>
+        <td> country: <%=@country%> </td> </tr>
       </table>
+<table id="hor-minimalist-b">
+  <tr>
+    <th>num</th>
+    <th>Name</th>
+     <th>Qty</th>
+    <th>Meijer price</th>
+    <th>Kroger price</th>
+   <th>Walmart price</th>
+    <th></th>
+  </tr>
+<% @sale_items.each do |item| %>
+  <tr>
+    <td><%= item.id %></td>
+    <td><%=image_tag("milk.jpg", :size=>"50x50")%><%= item.name %></td>
+     <td>3</td>
+    <td><%= item.store1_price %>| <%=@cost_1 =  item.store1_price*2 %></td>
+    <td><%= item.store2_price %> | <%=@cost_2 =  item.store2_price*2 %></td>
+    <td><%= item.store3_price %>| <%=@cost_3 =  item.store3_price*2 %></td>
+   </tr>
+   <%= array_m = [@cost_1, @cost_2, @cost_3] %>
+   <%=  @cost_1 + @cost_2 + @cost_3 %>
+<% end %>
+   <tr><td>&nbsp; </td><td>&nbsp; </td><td>totals: </td>
+   <td class="deal">$110.00 </td><td>$125.52 </td><td>$160.35 </td></tr>
+</table>
+
     

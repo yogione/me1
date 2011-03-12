@@ -2236,3 +2236,1150 @@ ActionView::Template::Error (undefined local variable or method `sessions_path' 
 Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
 Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.9ms)
 Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.4ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+  [1m[36mSQL (130.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (31.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateItems (20110226204741)
+Migrating to CreateStores (20110226205500)
+Migrating to CreateDefalutItems (20110226211453)
+Migrating to CreateUserItems (20110226214241)
+Migrating to AddPhotoToItems (20110226230952)
+Migrating to AddNameToStores (20110228012851)
+Migrating to CreateHomeTables (20110302225553)
+  [1m[35mSQL (436.0ms)[0m  CREATE TABLE `home_tables` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `item_id` int(11), `store1_price` float, `store2_price` float, `store3_price` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (24.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110302225553')[0m
+  [1m[35mSQL (73.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `defalut_items`[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW KEYS FROM `defalut_items`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `home_tables`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `home_tables`
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `items`[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW KEYS FROM `items`
+  [1m[36mSQL (3.2ms)[0m  [1mdescribe `stores`[0m
+  [1m[35mSQL (46.1ms)[0m  SHOW KEYS FROM `stores`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `user_items`[0m
+  [1m[35mSQL (9.5ms)[0m  SHOW KEYS FROM `user_items`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (12.6ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-02 18:00:21 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (257.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered items/index.html.erb within layouts/application (384.8ms)
+Completed 200 OK in 592ms (Views: 433.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-02 18:00:30 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:06:00 -0500
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (224.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (246.2ms)
+Completed 200 OK in 6317ms (Views: 353.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:06:07 -0500
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (126.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (148.4ms)
+Completed 200 OK in 10983ms (Views: 159.4ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT `items`.* FROM `items`
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:11:03 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (67.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.5ms)
+Rendered pages/home.html.erb within layouts/application (83.8ms)
+Completed 200 OK in 13696ms (Views: 91.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:11:32 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (67.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (83.9ms)
+Completed 200 OK in 6072ms (Views: 91.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:15:22 -0500
+  Processing by PagesController#home as HTML
+Completed   in 5899ms
+
+NameError (uninitialized constant PagesController::Items):
+  app/controllers/pages_controller.rb:11:in `home'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (101.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:15:39 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.5ms)[0m  [1mSELECT `home_tables`.* FROM `home_tables`[0m
+Rendered layouts/_stylesheets.html.erb (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (135.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (153.5ms)
+Completed 200 OK in 11214ms (Views: 161.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 18:19:08 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m  SELECT `home_tables`.* FROM `home_tables`
+Rendered pages/home.html.erb within layouts/application (23.1ms)
+Completed   in 6027ms
+
+ActionView::Template::Error (undefined method `home_table_path' for #<#<Class:0x8ccc40c>:0x8cbdd6c>):
+    9:   <tr>
+    10:     <td><%= item.id %></td>
+    11:     <td><%= item.store1_price %></td>
+    12:     <td><%= link_to 'Show', item %></td>
+    13:     <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    14:     <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    15:   </tr>
+  app/views/pages/home.html.erb:12:in `block in _app_views_pages_home_html_erb___169021206_73780290_75981482'
+  app/views/pages/home.html.erb:8:in `each'
+  app/views/pages/home.html.erb:8:in `_app_views_pages_home_html_erb___169021206_73780290_75981482'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.5ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (98.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 20:51:06 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1mSELECT `home_tables`.* FROM `home_tables`[0m
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (133.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (148.4ms)
+Completed 200 OK in 11012ms (Views: 156.6ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateItems (20110226204741)
+Migrating to CreateStores (20110226205500)
+Migrating to CreateDefalutItems (20110226211453)
+Migrating to CreateUserItems (20110226214241)
+Migrating to AddPhotoToItems (20110226230952)
+Migrating to AddNameToStores (20110228012851)
+Migrating to CreateHomeTables (20110302225553)
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `defalut_items`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `defalut_items`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `home_tables`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `home_tables`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `items`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `items`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `stores`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `stores`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `user_items`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `user_items`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mHomeTable Load (0.4ms)[0m  [1mSELECT `home_tables`.* FROM `home_tables` LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-02 20:56:38 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (70.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered items/index.html.erb within layouts/application (183.8ms)
+Completed 200 OK in 212ms (Views: 191.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-02 20:56:38 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 20:56:40 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.6ms)[0m  [1mSELECT `home_tables`.* FROM `home_tables`[0m
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (71.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (90.7ms)
+Completed 200 OK in 6081ms (Views: 98.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:02:12 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (304.9ms)[0m   select ht.*, i.* from hometable ht,
+ items i where ht.item_id = i.item_id
+Mysql2::Error: Table 'me1.hometable' doesn't exist:  select ht.*, i.* from hometable ht,
+                        items i where ht.item_id = i.item_id
+Completed   in 11318ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'me1.hometable' doesn't exist:  select ht.*, i.* from hometable ht,
+                        items i where ht.item_id = i.item_id):
+  app/controllers/pages_controller.rb:12:in `home'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:02:23 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.8ms)[0m  [1m select ht.*, i.* from hometable ht,
+ items i where ht.item_id = i.item_id[0m
+Mysql2::Error: Table 'me1.hometable' doesn't exist:  select ht.*, i.* from hometable ht,
+                        items i where ht.item_id = i.item_id
+Completed   in 10653ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'me1.hometable' doesn't exist:  select ht.*, i.* from hometable ht,
+                        items i where ht.item_id = i.item_id):
+  app/controllers/pages_controller.rb:12:in `home'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:02:44 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.8ms)[0m   select ht.*, i.* from hometables ht,
+ items i where ht.item_id = i.item_id
+Mysql2::Error: Table 'me1.hometables' doesn't exist:  select ht.*, i.* from hometables ht,
+                        items i where ht.item_id = i.item_id
+Completed   in 7698ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'me1.hometables' doesn't exist:  select ht.*, i.* from hometables ht,
+                        items i where ht.item_id = i.item_id):
+  app/controllers/pages_controller.rb:12:in `home'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:03:27 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.6ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.item_id[0m
+Mysql2::Error: Unknown column 'i.item_id' in 'where clause':  select ht.*, i.* from home_tables ht,
+                        items i where ht.item_id = i.item_id
+Completed   in 5839ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'i.item_id' in 'where clause':  select ht.*, i.* from home_tables ht,
+                        items i where ht.item_id = i.item_id):
+  app/controllers/pages_controller.rb:12:in `home'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:04:30 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (1.1ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (131.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (156.0ms)
+Completed 200 OK in 21019ms (Views: 164.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:07:46 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (152.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (178.3ms)
+Completed 200 OK in 10716ms (Views: 187.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:08:02 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.3ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (64.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 6073ms (Views: 113.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:08:53 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.4ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (68.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.3ms)
+Rendered pages/home.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 10639ms (Views: 94.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:12:51 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.4ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (67.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 11133ms (Views: 106.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-02 21:15:24 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (69.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered items/index.html.erb within layouts/application (122.9ms)
+Completed 200 OK in 151ms (Views: 130.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-02 21:15:24 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:15:26 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (70.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 11180ms (Views: 95.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:27:47 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (69.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (87.4ms)
+Completed 200 OK in 15810ms (Views: 95.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:29:40 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (69.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 15983ms (Views: 94.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:30:28 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.2ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (72.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (89.4ms)
+Completed 200 OK in 7117ms (Views: 97.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:36:39 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (70.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (89.4ms)
+Completed 200 OK in 15722ms (Views: 97.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-02 21:37:48 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.2ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (68.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 6065ms (Views: 94.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-03 22:02:52 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (233.7ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (424.6ms)
+  [1m[36mUser Load (36.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (421.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (2.9ms)
+Rendered items/index.html.erb within layouts/application (2963.2ms)
+Completed 200 OK in 4913ms (Views: 3565.6ms | ActiveRecord: 270.5ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-04 23:30:39 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered layouts/_header.html.erb (193.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered layouts/_footer.html.erb (11.1ms)
+Rendered items/index.html.erb within layouts/application (296.1ms)
+Completed 200 OK in 393ms (Views: 322.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-04 23:30:46 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-04 23:30:54 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (1.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered layouts/_header.html.erb (145.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.1ms)
+Rendered pages/home.html.erb within layouts/application (172.2ms)
+Completed 200 OK in 6226ms (Views: 181.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-04 23:31:01 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered layouts/_header.html.erb (150.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered layouts/_footer.html.erb (1.7ms)
+Rendered pages/home.html.erb within layouts/application (169.1ms)
+Completed 200 OK in 11149ms (Views: 177.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2011-03-04 23:40:22 -0500
+  Processing by StoresController#index as HTML
+  [1m[36mStore Load (14.9ms)[0m  [1mSELECT `stores`.* FROM `stores`[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered layouts/_header.html.erb (66.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered stores/index.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 174ms (Views: 115.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-04 23:40:36 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered layouts/_header.html.erb (92.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered layouts/_footer.html.erb (2.3ms)
+Rendered pages/home.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 6442ms (Views: 120.9ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-11 21:59:05 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (154.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.8ms)
+Rendered items/index.html.erb within layouts/application (214.4ms)
+Completed 200 OK in 281ms (Views: 227.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-11 21:59:11 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-11 22:00:22 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (129.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered items/index.html.erb within layouts/application (179.6ms)
+Completed 200 OK in 207ms (Views: 187.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-11 22:00:23 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:00:55 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (1.4ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (74.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 11214ms (Views: 175.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:02:58 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (129.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (154.8ms)
+Completed 200 OK in 11958ms (Views: 171.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:05:12 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.3ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (80.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (97.1ms)
+Completed 200 OK in 5993ms (Views: 104.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:08:09 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.2ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (76.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 15977ms (Views: 101.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:09:05 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.4ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (72.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (2.4ms)
+Rendered pages/home.html.erb within layouts/application (100.2ms)
+Completed 200 OK in 5994ms (Views: 116.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:11:30 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.2ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (74.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (91.6ms)
+Completed 200 OK in 15564ms (Views: 99.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:12:18 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (75.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (91.5ms)
+Completed 200 OK in 6079ms (Views: 99.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:12:26 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (128.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (145.4ms)
+Completed 200 OK in 11950ms (Views: 161.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-11 22:18:38 -0500
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT `items`.* FROM `items`
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (134.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered items/index.html.erb within layouts/application (185.5ms)
+Completed 200 OK in 213ms (Views: 193.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-11 22:18:39 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:18:42 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (133.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (149.4ms)
+Completed 200 OK in 11114ms (Views: 157.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:18:53 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.3ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (133.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (159.4ms)
+Completed 200 OK in 6157ms (Views: 174.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:19:43 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.4ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (3.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (72.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_footer.html.erb (2.2ms)
+Rendered pages/home.html.erb within layouts/application (103.7ms)
+Completed 200 OK in 15749ms (Views: 119.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:20:29 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.2ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+ERROR: compiling _app_views_pages_home_html_erb___253772724_79240320__544268837 RAISED /home/srini/code/ruby/me1/app/views/pages/home.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting ')'
+... (image_tag("milk.jpg", :size="50x50"));@output_buffer.appen...
+...                               ^
+/home/srini/code/ruby/me1/app/views/pages/home.html.erb:20: syntax error, unexpected ')', expecting keyword_end
+...tag("milk.jpg", :size="50x50"));@output_buffer.append= ( ite...
+...                               ^
+Function body:           def _app_views_pages_home_html_erb___253772724_79240320__544268837(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "pages/home";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('    <table>
+      <tr><td>Your IP address is ');@output_buffer.append= ( @client_ip );@output_buffer.safe_concat('   </td></tr>
+      <tr> <td>city: ');@output_buffer.append= (@city);@output_buffer.safe_concat(' </td>
+        <td> region: ');@output_buffer.append= (@region);@output_buffer.safe_concat(' </td>
+        <td> country: ');@output_buffer.append= (@country);@output_buffer.safe_concat(' </td> </tr>
+      </table>
+<table id="hor-minimalist-b">
+  <tr>
+    <th>num</th>
+    <th>Name</th>
+     <th>Qty</th>
+    <th>Meijer price</th>
+    <th>Kroger price</th>
+   <th>Walmart price</th>
+    <th></th>
+  </tr>
+');@output_buffer.append_if_string=  @sale_items.each do |item| 
+@output_buffer.safe_concat('  <tr>
+    <td>');@output_buffer.append= ( item.id );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= (image_tag("milk.jpg", :size="50x50"));@output_buffer.append= ( item.name );@output_buffer.safe_concat('</td>
+     <td>3</td>
+    <td>');@output_buffer.append= ( item.store1_price );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( item.store2_price );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( item.store3_price );@output_buffer.safe_concat('</td>
+   </tr>
+'); end 
+@output_buffer.safe_concat('   <tr><td>&nbsp; </td><td>&nbsp; </td><td>totals: </td>
+   <td class="deal">$110.00 </td><td>$125.52 </td><td>$160.35 </td></tr>
+</table>
+
+    
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `module_eval'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `compile'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:435:in `_run__813204786__process_action__429300451__callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `block in action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/home.html.erb within layouts/application (113.7ms)
+Completed   in 6190ms
+
+ActionView::Template::Error (/home/srini/code/ruby/me1/app/views/pages/home.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting ')'
+... (image_tag("milk.jpg", :size="50x50"));@output_buffer.appen...
+...                               ^
+/home/srini/code/ruby/me1/app/views/pages/home.html.erb:20: syntax error, unexpected ')', expecting keyword_end
+...tag("milk.jpg", :size="50x50"));@output_buffer.append= ( ite...
+...                               ^):
+    17: <% @sale_items.each do |item| %>
+    18:   <tr>
+    19:     <td><%= item.id %></td>
+    20:     <td><%=image_tag("milk.jpg", :size="50x50")%><%= item.name %></td>
+    21:      <td>3</td>
+    22:     <td><%= item.store1_price %></td>
+    23:     <td><%= item.store2_price %></td>
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:21:20 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+ERROR: compiling _app_views_pages_home_html_erb___253772724_79886580__544268837 RAISED /home/srini/code/ruby/me1/app/views/pages/home.html.erb:20: syntax error, unexpected ',', expecting ')'
+...append= (image_tag("milk.jpg"), :size="50x50");@output_buffe...
+...                               ^
+Function body:           def _app_views_pages_home_html_erb___253772724_79886580__544268837(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "pages/home";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('    <table>
+      <tr><td>Your IP address is ');@output_buffer.append= ( @client_ip );@output_buffer.safe_concat('   </td></tr>
+      <tr> <td>city: ');@output_buffer.append= (@city);@output_buffer.safe_concat(' </td>
+        <td> region: ');@output_buffer.append= (@region);@output_buffer.safe_concat(' </td>
+        <td> country: ');@output_buffer.append= (@country);@output_buffer.safe_concat(' </td> </tr>
+      </table>
+<table id="hor-minimalist-b">
+  <tr>
+    <th>num</th>
+    <th>Name</th>
+     <th>Qty</th>
+    <th>Meijer price</th>
+    <th>Kroger price</th>
+   <th>Walmart price</th>
+    <th></th>
+  </tr>
+');@output_buffer.append_if_string=  @sale_items.each do |item| 
+@output_buffer.safe_concat('  <tr>
+    <td>');@output_buffer.append= ( item.id );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= (image_tag("milk.jpg"), :size="50x50");@output_buffer.append= ( item.name );@output_buffer.safe_concat('</td>
+     <td>3</td>
+    <td>');@output_buffer.append= ( item.store1_price );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( item.store2_price );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( item.store3_price );@output_buffer.safe_concat('</td>
+   </tr>
+'); end 
+@output_buffer.safe_concat('   <tr><td>&nbsp; </td><td>&nbsp; </td><td>totals: </td>
+   <td class="deal">$110.00 </td><td>$125.52 </td><td>$160.35 </td></tr>
+</table>
+
+    
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `module_eval'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `compile'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:435:in `_run__813204786__process_action__429300451__callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `block in action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed   in 5901ms
+
+ActionView::Template::Error (/home/srini/code/ruby/me1/app/views/pages/home.html.erb:20: syntax error, unexpected ',', expecting ')'
+...append= (image_tag("milk.jpg"), :size="50x50");@output_buffe...
+...                               ^):
+    17: <% @sale_items.each do |item| %>
+    18:   <tr>
+    19:     <td><%= item.id %></td>
+    20:     <td><%=image_tag("milk.jpg"), :size="50x50"%><%= item.name %></td>
+    21:      <td>3</td>
+    22:     <td><%= item.store1_price %></td>
+    23:     <td><%= item.store2_price %></td>
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-11 22:22:35 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.3ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (127.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (154.7ms)
+Completed 200 OK in 15798ms (Views: 170.3ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/srini/code/ruby/me1/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/srini/code/ruby/me1/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-12 00:08:53 -0500
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT `items`.* FROM `items`[0m
+Rendered layouts/_stylesheets.html.erb (2.9ms)
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (150.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (2.3ms)
+Rendered items/index.html.erb within layouts/application (223.7ms)
+Completed 200 OK in 268ms (Views: 231.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/arrow.png" for 127.0.0.1 at 2011-03-12 00:08:54 -0500
+
+ActionController::RoutingError (No route matches "/arrow.png"):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-12 00:08:59 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (0.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (98.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_footer.html.erb (1.6ms)
+Rendered pages/home.html.erb within layouts/application (120.6ms)
+Completed 200 OK in 6131ms (Views: 128.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-12 00:16:14 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.3ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (64.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (123.1ms)
+Completed 200 OK in 6112ms (Views: 139.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-12 00:19:37 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mHomeTable Load (1.3ms)[0m  [1m select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id[0m
+Rendered pages/home.html.erb within layouts/application (85.8ms)
+Completed   in 5951ms
+
+ActionView::Template::Error (can't convert Float into String):
+    24:     <td><%= item.store3_price %>| <%=@cost_3 =  item.store3_price*2 %></td>
+    25:    </tr>
+    26:    <%= array_m = [@cost_1, @cost_2, @cost_3] %>
+    27:    <%="TOTLA = "+  @cost_1 + @cost_2 + @cost_3 %>
+    28: <% end %>
+    29:    <tr><td>&nbsp; </td><td>&nbsp; </td><td>totals: </td>
+    30:    <td class="deal">$110.00 </td><td>$125.52 </td><td>$160.35 </td></tr>
+  app/views/pages/home.html.erb:27:in `+'
+  app/views/pages/home.html.erb:27:in `block in _app_views_pages_home_html_erb___709118379_79339500_173173097'
+  app/views/pages/home.html.erb:17:in `each'
+  app/views/pages/home.html.erb:17:in `_app_views_pages_home_html_erb___709118379_79339500_173173097'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-12 00:20:11 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mHomeTable Load (0.3ms)[0m   select ht.*, i.* from home_tables ht,
+ items i where ht.item_id = i.id
+Rendered layouts/_stylesheets.html.erb (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (86.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (3.1ms)
+Rendered pages/home.html.erb within layouts/application (124.0ms)
+Completed 200 OK in 10970ms (Views: 138.0ms | ActiveRecord: 0.5ms)

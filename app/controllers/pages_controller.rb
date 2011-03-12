@@ -8,6 +8,10 @@ class PagesController < ApplicationController
     @region = GeoLocation.find(@client_ip)[:region]
     @country = GeoLocation.find(@client_ip)[:country]
 
+    #@sale_items = HomeTable.all(:include => Item)
+    @sale_items = HomeTable.find_by_sql(" select ht.*, i.* from home_tables ht,
+                        items i where ht.item_id = i.id")
+    p @sale_items[0].name
     
 #      @stories = Story.find(:all, :include => :comments, :order => 'votes DESC')
 #      # @stories = Story.paginate(:page => params[:page])
