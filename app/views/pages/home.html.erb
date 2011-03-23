@@ -19,11 +19,11 @@
     <td><%= item.id %></td>
     <td><%=image_tag("milk.jpg", :size=>"50x50")%><%= item.name %></td>
      <td>3</td>
-    <td><%= item.store1_price %>| <%=@cost_1 =  item.store1_price*2 %></td>
+    <td><%= item.store1_price %>| <%=@cost_1[item.id] =  item.store1_price*2 %></td>
     <td><%= item.store2_price %> | <%=@cost_2 =  item.store2_price*2 %></td>
     <td><%= item.store3_price %>| <%=@cost_3 =  item.store3_price*2 %></td>
    </tr>
-   <%= array_m = [@cost_1, @cost_2, @cost_3] %>
+   <%= array_m = [@cost_1[item.id], @cost_2, @cost_3] %>
    <%=  @cost_1 + @cost_2 + @cost_3 %>
 <% end %>
    <tr><td>&nbsp; </td><td>&nbsp; </td><td>totals: </td>
